@@ -8,7 +8,6 @@ export class ErrorContext extends Error {
     public constructor(error: Error, context?: Record<string, unknown>) {
         super(error.message);
         super.name = error.name;
-        super.stack = error.stack;
         this.original = error;
         this.context = context ?? {};
     }
